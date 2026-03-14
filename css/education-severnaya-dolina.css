@@ -1,0 +1,266 @@
+/* Страница «Северная долина» — по макету Figma (Образование - СД - 1920) */
+
+/* Адаптивы: 390, 768, 1024, 1440, 1920 */
+.sd-section {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .sd-section {
+    padding-bottom: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sd-section {
+    padding-bottom: 64px;
+  }
+}
+
+/* Hero блок (по макету: column, alignItems center) */
+.sd-hero {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.sd-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-bottom: 16px;
+  background: var(--color-accent);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  color: var(--color-bg-white);
+}
+
+.sd-hero__title {
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.sd-hero__title--accent {
+  margin-bottom: 16px;
+  color: var(--color-accent);
+}
+
+.sd-hero__text {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+/* Статистика */
+.sd-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+  margin-bottom: 40px;
+}
+
+.sd-stats__item {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.sd-stats__value {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-accent);
+}
+
+/* Заголовок «Для кого?» */
+.sd-section__heading {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+/* Карточки «Для кого?» — адаптивы */
+.sd-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 390px) {
+  .sd-cards {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .sd-cards {
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sd-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sd-card {
+  padding: 24px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.sd-card__icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.sd-card__title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.sd-card__text {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* Программа обучения */
+.sd-program {
+  margin-top: 32px;
+}
+
+.sd-program__title {
+  margin: 0 0 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.sd-program__table-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+}
+
+.sd-program__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+}
+
+.sd-program__table th,
+.sd-program__table td {
+  padding: 14px 20px;
+  text-align: left;
+  border: 1px solid var(--color-border);
+}
+
+.sd-program__table th {
+  background: var(--color-accent);
+  color: var(--color-bg-white);
+  font-weight: 600;
+}
+
+.sd-program__table td {
+  color: var(--color-text-primary);
+}
+
+.sd-program__table-row--alt td {
+  background: var(--color-bg-tint);
+}
+
+.sd-program__table td:first-child,
+.sd-program__table th:first-child {
+  width: 80px;
+  text-align: center;
+}
+
+.sd-program__table td:last-child,
+.sd-program__table th:last-child {
+  width: 80px;
+  text-align: center;
+}
+
+/* Стоимость обучения (по макету Figma) */
+.sd-cost {
+  margin-top: 32px;
+  padding: 32px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.sd-cost__title {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.sd-cost__price {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+
+.sd-cost__price-unit {
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.sd-cost__note,
+.sd-cost__diploma {
+  margin: 0 0 8px;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.sd-cost__diploma {
+  margin-bottom: 24px;
+}
+
+.sd-cost__cta {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--color-accent);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  color: var(--color-bg-white);
+  text-decoration: none;
+}
+
+.sd-cost__cta:hover {
+  opacity: 0.9;
+}

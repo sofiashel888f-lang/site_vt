@@ -1,0 +1,360 @@
+/* Детальная страница лаборатории «Интеллектуальные транспортные системы» — по макету Figma */
+
+/* Адаптивы: 390, 768, 1024, 1440, 1920 */
+.lab-detail-hero {
+  padding: 48px 16px 80px;
+  background: linear-gradient(170deg, rgba(232, 240, 254, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+@media (min-width: 390px) {
+  .lab-detail-hero {
+    padding: 56px 20px 88px;
+  }
+}
+
+@media (min-width: 768px) {
+  .lab-detail-hero {
+    padding: var(--section-padding-y-lg) 24px var(--section-padding-bottom);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lab-detail-hero {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lab-detail-hero {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .lab-detail-hero {
+    padding-left: var(--container-padding-x);
+    padding-right: 80px;
+  }
+}
+
+.lab-detail-hero__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.lab-detail-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-bottom: 16px;
+  background: var(--color-accent);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  color: var(--color-bg-white);
+}
+
+.lab-detail-hero__title {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-hero__lead {
+  margin: 0;
+  max-width: 720px;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+/* Content — адаптивы */
+.lab-detail-content {
+  padding: 40px 16px 56px;
+  background: var(--color-bg-white);
+}
+
+@media (min-width: 390px) {
+  .lab-detail-content {
+    padding: 48px 20px 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .lab-detail-content {
+    padding: 56px 24px 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lab-detail-content {
+    padding: 60px 32px 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .lab-detail-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .lab-detail-content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.container--lab-detail {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+/* Info cards */
+.lab-detail-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .lab-detail-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lab-detail-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+.lab-detail-info-card {
+  padding: 24px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.lab-detail-info-card__icon {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.lab-detail-info-card__title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-info-card__text {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+/* Grid: equipment + projects */
+.lab-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .lab-detail-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+.lab-detail-section__title {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-equipment__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-equipment__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.lab-detail-equipment__icon {
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.lab-detail-projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lab-detail-project-card {
+  padding: 20px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+}
+
+.lab-detail-project-card__title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-accent);
+}
+
+.lab-detail-project-card__text {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+/* Gallery */
+.lab-detail-gallery__title {
+  margin: 0 0 16px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-gallery__title-line {
+  width: 60px;
+  height: 4px;
+  margin: 0 0 20px;
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.lab-detail-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .lab-detail-gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.lab-detail-gallery__img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+/* Contact card */
+.lab-detail-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  background: var(--color-bg-light);
+  border-radius: 24px;
+  border: 1px solid var(--color-border);
+}
+
+.lab-detail-contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--color-accent);
+  border-radius: 60px;
+  font-size: 40px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.lab-detail-contact__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lab-detail-contact__name {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.lab-detail-contact__role,
+.lab-detail-contact__email,
+.lab-detail-contact__phone {
+  margin: 0 0 4px;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.lab-detail-contact__phone {
+  margin-bottom: 0;
+}
+
+/* Back link */
+.lab-detail-back {
+  margin-top: 0;
+}
+
+.lab-detail-back__link {
+  display: inline-block;
+  padding: 14px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.lab-detail-back__link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}

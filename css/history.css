@@ -1,0 +1,379 @@
+/* Страница «История» — интро и таймлайн (BEM, относительные пути) */
+
+/* Intro block — адаптивы: 390, 768, 1024, 1440, 1920 */
+.history-intro {
+  position: relative;
+  padding: 48px 16px 80px;
+  background: linear-gradient(162deg, rgba(26, 26, 26, 0.7) 0%, rgba(34, 102, 204, 0.4) 100%),
+    url("../images/history-intro-bg.png") center / cover no-repeat;
+  color: var(--color-bg-white);
+  overflow: hidden;
+}
+
+@media (min-width: 390px) {
+  .history-intro {
+    padding: 56px 20px 88px;
+  }
+}
+
+@media (min-width: 768px) {
+  .history-intro {
+    padding: var(--section-padding-y-lg) 24px var(--section-padding-bottom);
+  }
+}
+
+@media (min-width: 1024px) {
+  .history-intro {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .history-intro {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .history-intro {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* Background circles (декоративные кружочки из макета) */
+.history-intro__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.history-intro__circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.history-intro__circle--1 {
+  width: 120px;
+  height: 120px;
+  top: 15%;
+  right: 12%;
+}
+
+.history-intro__circle--2 {
+  width: 80px;
+  height: 80px;
+  top: 45%;
+  right: 8%;
+}
+
+.history-intro__circle--3 {
+  width: 200px;
+  height: 200px;
+  bottom: 10%;
+  right: 20%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.history-intro__circle--4 {
+  width: 60px;
+  height: 60px;
+  top: 25%;
+  left: 15%;
+}
+
+.history-intro__circle--5 {
+  width: 100px;
+  height: 100px;
+  bottom: 25%;
+  left: 8%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.history-intro__container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.history-intro__title {
+  margin: 0 0 var(--gap-lg);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(32px, 5vw, var(--font-size-hero));
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.history-intro__text {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.history-intro__text p {
+  margin: 0;
+}
+
+/* Timeline — адаптивы: 390, 768, 1024, 1440, 1920 */
+.timeline {
+  padding: 64px 16px 56px;
+  background: var(--color-bg-white);
+}
+
+@media (min-width: 390px) {
+  .timeline {
+    padding: 72px 20px 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    padding: 96px 24px var(--section-padding-y);
+  }
+}
+
+@media (min-width: 1024px) {
+  .timeline {
+    padding: 120px 32px var(--section-padding-y);
+  }
+}
+
+@media (min-width: 1440px) {
+  .timeline {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .timeline {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.timeline__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.timeline__track {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline__line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-bg-tint);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .timeline__line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 24px;
+}
+
+@media (min-width: 768px) {
+  .timeline__item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .timeline__item:nth-child(odd) {
+    padding-right: calc(50% + 40px);
+    text-align: left;
+  }
+
+  .timeline__item:nth-child(even) {
+    padding-left: calc(50% + 40px);
+    text-align: left;
+  }
+}
+
+/* Card */
+.timeline-card {
+  padding: var(--gap-xl);
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.timeline-card__year {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+}
+
+.timeline-card__title {
+  margin: 0 0 8px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.timeline-card__text {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+}
+
+/* Выдающиеся выпускники — адаптивы: 390, 768, 1024, 1440, 1920 */
+.graduates {
+  padding: 48px 16px 56px;
+  background: var(--color-bg-tint);
+}
+
+@media (min-width: 390px) {
+  .graduates {
+    padding: 56px 20px 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .graduates {
+    padding: var(--section-padding-y) 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .graduates {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .graduates {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .graduates {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.graduates__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.graduates__title {
+  margin: 0 0 32px;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .graduates__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .graduates__title {
+    margin-bottom: 48px;
+  }
+}
+
+.graduates__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.graduates__row:last-child {
+  margin-bottom: 0;
+}
+
+.graduate-card {
+  flex: 1 1 280px;
+  max-width: 392px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.graduate-card__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-border);
+}
+
+.graduate-card__avatar--1 { background-image: url("../images/graduate-1.png"); }
+.graduate-card__avatar--2 { background-image: url("../images/graduate-2.png"); }
+.graduate-card__avatar--3 { background-image: url("../images/graduate-3.png"); }
+.graduate-card__avatar--4 { background-image: url("../images/graduate-4.png"); }
+.graduate-card__avatar--5 { background-image: url("../images/graduate-5.png"); }
+.graduate-card__avatar--6 { background-image: url("../images/graduate-6.png"); }
+
+.graduate-card__name {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.graduate-card__position {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.graduate-card__year {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}

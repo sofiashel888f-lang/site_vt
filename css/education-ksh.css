@@ -1,0 +1,207 @@
+/* Страница «КШ ФИСТ» — по макету Figma (Образование - КШ ФИСТ - 1920) */
+
+.ksh-section {
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .ksh-section {
+    padding-bottom: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ksh-section {
+    padding-bottom: 64px;
+  }
+}
+
+.ksh-section__title {
+  margin: 0 0 var(--gap-sm);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.ksh-section__subtitle {
+  margin: 0 0 32px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+/* Сетка курсов — адаптивы: 390, 768, 1024, 1440, 1920 */
+.ksh-courses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 390px) {
+  .ksh-courses {
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ksh-courses {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ksh-courses {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ksh-courses {
+    gap: 32px;
+  }
+}
+
+/* Карточка курса */
+.ksh-course-card {
+  padding: 24px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.ksh-course-card__badge {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background: var(--color-accent);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-bg-white);
+}
+
+.ksh-course-card__title {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.ksh-course-card__desc {
+  margin: 0 0 12px;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.ksh-course-card__price {
+  margin: 0 0 8px;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+}
+
+.ksh-course-card__price-unit {
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
+.ksh-course-card__teacher {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+/* Блок «Формат обучения» — адаптивы */
+.ksh-format {
+  padding: 20px;
+  background: var(--color-bg-tint);
+  border-radius: 24px;
+}
+
+@media (min-width: 390px) {
+  .ksh-format {
+    padding: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ksh-format {
+    padding: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ksh-format {
+    padding: 32px;
+  }
+}
+
+.ksh-format__title {
+  margin: 0 0 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.ksh-format__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+}
+
+.ksh-format__item {
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.ksh-format__value {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-accent);
+}
+
+/* Кнопка «Записаться на курсы» — по макету Figma */
+.ksh-cta {
+  margin-top: 32px;
+}
+
+.ksh-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  color: var(--color-bg-white);
+  background: var(--color-accent);
+  border: 0;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: var(--shadow-button);
+  cursor: pointer;
+}
+
+.ksh-cta__button:hover {
+  opacity: 0.92;
+}

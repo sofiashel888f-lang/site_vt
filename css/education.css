@@ -1,0 +1,270 @@
+/* Страница «Образование» — интро, табы, карточки направлений (BEM, по макету Figma) */
+
+/* Адаптивы: 390, 768, 1024, 1440, 1920 */
+.education-intro {
+  position: relative;
+  padding: 48px 16px 80px;
+  background: linear-gradient(162deg, rgba(26, 26, 26, 0.7) 0%, rgba(34, 102, 204, 0.4) 100%),
+    url("../images/education-intro-bg.png") center / cover no-repeat;
+  color: var(--color-bg-white);
+}
+
+@media (min-width: 390px) {
+  .education-intro {
+    padding: 56px 20px 88px;
+  }
+}
+
+@media (min-width: 768px) {
+  .education-intro {
+    padding: var(--section-padding-y-lg) 24px var(--section-padding-bottom);
+  }
+}
+
+@media (min-width: 1024px) {
+  .education-intro {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .education-intro {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .education-intro {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.education-intro__container {
+  max-width: 900px;
+}
+
+.education-intro__title {
+  margin: 0 0 var(--gap-sm);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(32px, 5vw, var(--font-size-hero));
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.education-intro__subtitle {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-normal);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Content block — адаптивы */
+.education-content {
+  padding: 64px 16px 80px;
+  background: var(--color-bg-white);
+}
+
+@media (min-width: 390px) {
+  .education-content {
+    padding: 72px 20px 88px;
+  }
+}
+
+@media (min-width: 768px) {
+  .education-content {
+    padding: 96px 24px 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .education-content {
+    padding: 120px 32px 120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .education-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .education-content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+.container--education {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 390px) {
+  .container--education {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container--education {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container--education {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container--education {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container--education {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+/* Tabs */
+.education-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-xl);
+}
+
+.education-tabs__item {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.education-tabs__item:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.education-tabs__item--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-white);
+}
+
+/* Cards container */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 0 64px;
+}
+
+/* Card */
+.education-card {
+  padding: 32px;
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.education-card__title {
+  margin: 0 0 var(--gap-sm);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.education-card__degree {
+  margin: 0 0 var(--gap-md);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+}
+
+.education-card__lead {
+  margin: 0 0 var(--gap-md);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.education-card__stats {
+  margin: 0 0 var(--gap-md);
+  padding: 0;
+  list-style: none;
+}
+
+.education-card__stats li {
+  margin-bottom: 4px;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.education-card__heading {
+  margin: var(--gap-md) 0 var(--gap-sm);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.education-card__heading:first-of-type {
+  margin-top: 0;
+}
+
+.education-card__list {
+  margin: 0 0 var(--gap-md);
+  padding: 0;
+  list-style: none;
+}
+
+.education-card__list li {
+  margin-bottom: 4px;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.education-card__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-card__pill {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--color-bg-tint);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-base);
+  color: var(--color-accent);
+}
