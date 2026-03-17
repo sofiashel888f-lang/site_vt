@@ -1,4 +1,4 @@
-/* Main styles вЂ” BEM, relative paths */
+/* Main styles — BEM, relative paths */
 
 *,
 *::before,
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-/* Container вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Container — адаптивы: 390, 768, 1024, 1440, 1920 */
 .container {
   width: 100%;
   max-width: 1240px;
@@ -145,7 +145,7 @@ a {
   gap: var(--gap-sm);
 }
 
-/* Р‘СѓСЂРіРµСЂ вЂ” РїРѕРєР°Р·С‹РІР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР° РјРѕР±РёР»РєРµ (РґРѕ 768px) */
+/* Бургер — показывается только на мобилке (до 768px) */
 .header__burger {
   display: none;
   flex-direction: column;
@@ -193,7 +193,7 @@ a {
     display: flex;
   }
 
-  /* РњРµРЅСЋ РЅР° РІРµСЃСЊ СЌРєСЂР°РЅ: С„РёРєСЃРёСЂСѓРµРј РїРѕ viewport */
+  /* Меню на весь экран: фиксируем по viewport */
   .header__menu-wrap {
     position: fixed;
     top: 0;
@@ -280,7 +280,7 @@ a {
   }
 }
 
-/* Р‘Р»РѕРєРёСЂРѕРІРєР° СЃРєСЂРѕР»Р»Р° РїСЂРё РѕС‚РєСЂС‹С‚РѕРј РјРµРЅСЋ РЅР° РјРѕР±РёР»РєРµ */
+/* Блокировка скролла при открытом меню на мобилке */
 @media (max-width: 767px) {
   body.menu-open {
     overflow: hidden;
@@ -339,7 +339,7 @@ a {
   border-radius: var(--radius-pill);
 }
 
-/* Hero вЂ” РЅРѕСЂРјР°Р»СЊРЅС‹Рµ РѕС‚СЃС‚СѓРїС‹ РїРѕ Р±СЂРµР№РєРїРѕРёРЅС‚Р°Рј */
+/* Hero — нормальные отступы по брейкпоинтам */
 .hero {
   position: relative;
   min-height: 400px;
@@ -448,7 +448,7 @@ a {
   box-shadow: var(--shadow-button);
 }
 
-/* Stats вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Stats — адаптивы: 390, 768, 1024, 1440, 1920 */
 .stats {
   padding: 40px 16px 56px;
   background: var(--color-bg-white);
@@ -567,7 +567,7 @@ a {
   text-align: center;
 }
 
-/* News вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* News — адаптивы: 390, 768, 1024, 1440, 1920 */
 .section--news {
   padding: 0 16px 48px;
 }
@@ -699,7 +699,7 @@ a {
   color: var(--color-accent);
 }
 
-/* Programs вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Programs — адаптивы: 390, 768, 1024, 1440, 1920 */
 .section--programs {
   padding: 40px 16px 80px;
 }
@@ -803,7 +803,7 @@ a {
   color: var(--color-accent);
 }
 
-/* Labs вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Labs — адаптивы: 390, 768, 1024, 1440, 1920 */
 .section--labs {
   padding: 40px 16px 56px;
 }
@@ -902,7 +902,7 @@ a {
   color: var(--color-text-secondary);
 }
 
-/* Partners вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Partners — адаптивы: 390, 768, 1024, 1440, 1920 */
 .section--partners {
   padding: 40px 16px 56px;
   background: var(--color-bg-light);
@@ -952,7 +952,7 @@ a {
   color: var(--color-partners-muted);
 }
 
-/* Footer вЂ” Р°РґР°РїС‚РёРІС‹: 390, 768, 1024, 1440, 1920 */
+/* Footer — адаптивы: 390, 768, 1024, 1440, 1920 */
 .footer {
   padding: 48px 16px 24px;
   background: var(--color-text-primary);
